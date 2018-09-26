@@ -180,17 +180,191 @@ $(document).ready(function () {
 <p>Try executing this chunk by clicking the <em>Run</em> button within the chunk or by placing your cursor inside it and pressing <em>Ctrl+Shift+Enter</em>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChjYXJzKVxuYGBgIn0= -->
-<pre class="r"><code>plot(cars)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbmBgYCJ9 -->
+<pre class="r"><code>library(readr)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBtZXNzYWdlOlxuSW4gc3Ryc3BsaXQoY29kZSwgXCJcXG5cIiwgZml4ZWQgPSBUUlVFKSA6XG4gIGlucHV0IHN0cmluZyAxIGlzIGludmFsaWQgaW4gdGhpcyBsb2NhbGVcbiJ9 -->
+<pre><code>Warning message:
+In strsplit(code, &quot;\n&quot;, fixed = TRUE) :
+  input string 1 is invalid in this locale</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3R1ZGVudCA8LSByZWFkX2NzdihcImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS90cGVtYXJ0aW4vY291cnNlLTEwNy0xLXByb2dyYW1taW5nLWZvci1kYXRhLXNjaWVuY2UvbWFzdGVyL2RhdGEvc3R1ZGVudC5jc3ZcIilcbmBgYCJ9 -->
+<pre class="r"><code>student &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/course-107-1-programming-for-data-science/master/data/student.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiYGN1cmxgIHBhY2thZ2Ugbm90IGluc3RhbGxlZCwgZmFsbGluZyBiYWNrIHRvIHVzaW5nIGB1cmwoKWBcblBhcnNlZCB3aXRoIGNvbHVtbiBzcGVjaWZpY2F0aW9uOlxuY29scyhcbiAgpEq+x6Z+ID0gY29sX2NoYXJhY3RlcigpLFxuICClWKXNpmEgPSBjb2xfY2hhcmFjdGVyKCksXG4gIKnKp08gPSBjb2xfY2hhcmFjdGVyKCksXG4gIKitsKogPSBjb2xfZG91YmxlKClcbilcbiJ9 -->
+<pre><code>`curl` package not installed, falling back to using `url()`
+Parsed with column specification:
+cols(
+  &lt;U+613C&gt;&lt;U+3E34&gt;J&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+01E6&gt;~ = col_character(),
+  &lt;U+613C&gt;&lt;U+3E35&gt;X&lt;U+613C&gt;&lt;U+3E35&gt;&lt;U+0366&gt;a = col_character(),
+  &lt;U+613C&gt;&lt;U+3E39&gt;&lt;U+02A7&gt;O = col_character(),
+  &lt;U+613C&gt;&lt;U+3E38&gt;&lt;U+613C&gt;&lt;U+3E64&gt;&lt;U+623C&gt;&lt;U+3E30&gt;&lt;U+613C&gt;&lt;U+3E61&gt; = col_double()
+)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcbmBgYCJ9 -->
+<pre class="r"><code>library(dplyr)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog5oS847ix5oS847i1ZHBseXLmhLzjuLHmhLzjuLZcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDmhLzjuLHmhLzjuLVwYWNrYWdlOnN0YXRz5oS847ix5oS847i2OlxuXG4gICAgZmlsdGVyLCBsYWdcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDmhLzjuLHmhLzjuLVwYWNrYWdlOmJhc2XmhLzjuLHmhLzjuLY6XG5cbiAgICBpbnRlcnNlY3QsIHNldGRpZmYsIHNldGVxdWFsLCB1bmlvblxuIn0= -->
+<pre><code>
+Attaching package: &lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E35&gt;dplyr&lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E36&gt;
+
+The following objects are masked from &lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E35&gt;package:stats&lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E36&gt;:
+
+    filter, lag
+
+The following objects are masked from &lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E35&gt;package:base&lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E36&gt;:
+
+    intersect, setdiff, setequal, union</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShtYWdyaXR0cilcbnN0dWRlbnQgJTw+JSBtdXRhdGUoXG4gIOi6q+mrmOe0mui3nT1jdXQo6Lqr6auYLGMoMCwxNTAsMTU1LDE2MCwxNjUsMTcwLDE3NSwxODAsMTg1LDIwMCkpKVxuYGBgIn0= -->
+<pre class="r"><code>library(magrittr)
+student %&lt;&gt;% mutate(
+  身高級距=cut(身高,c(0,150,155,160,165,170,175,180,185,200)))</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the toolbar or by pressing <em>Ctrl+Alt+I</em>.</p>
-<p>When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the <em>Preview</em> button or press <em>Ctrl+Shift+K</em> to preview the HTML file).</p>
-<p>The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuZmFjdG9yKHN0dWRlbnQkPGU1Pu+KvjxlNz48OTQ+7riB7q+1KSAtPiBzdHVkZW50JDxlNT7vir48ZTc+PDk0Pu64ge6vtVxuYGBgIn0= -->
+<pre class="r"><code>as.factor(student$&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E34&gt;) -&gt; student$&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E34&gt;</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmFjdG9yKHN0dWRlbnQk6Lqr6auY57Sa6LedLFxuICAgICAgIGxldmVscz1jKFwiKDAsMTUwXVwiLFwiKDE1MCwxNTVdXCIsIFwiKDE1NSwxNjBdXCIsIFwiKDE2MCwxNjVdXCIgLFwiKDE2NSwxNzBdXCIsIFwiKDE3MCwxNzVdXCIgLFwiKDE3NSwxODBdXCIgLFwiKDE4MCwxODVdXCIsIFwiKDE4NSwyMDBdXCIpLFxuICAgICAgIG9yZGVyZWQ9VFJVRSkgLT4gc3R1ZGVudCTouqvpq5jntJrot51cbmBgYCJ9 -->
+<pre class="r"><code>factor(student$身高級距,
+       levels=c(&quot;(0,150]&quot;,&quot;(150,155]&quot;, &quot;(155,160]&quot;, &quot;(160,165]&quot; ,&quot;(165,170]&quot;, &quot;(170,175]&quot; ,&quot;(175,180]&quot; ,&quot;(180,185]&quot;, &quot;(185,200]&quot;),
+       ordered=TRUE) -&gt; student$身高級距</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBtZXNzYWdlOlxuSW4gc3Ryc3BsaXQoY29kZSwgXCJcXG5cIiwgZml4ZWQgPSBUUlVFKSA6XG4gIGlucHV0IHN0cmluZyAxIGlzIGludmFsaWQgaW4gdGhpcyBsb2NhbGVcbiJ9 -->
+<pre><code>Warning message:
+In strsplit(code, &quot;\n&quot;, fixed = TRUE) :
+  input string 1 is invalid in this locale</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcbmxpYnJhcnkobHVicmlkYXRlKVxuYGBgIn0= -->
+<pre class="r"><code>library(dplyr)
+library(lubridate)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog5oS847ix5oS847i1bHVicmlkYXRl5oS847ix5oS847i2XG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0IGlzIG1hc2tlZCBmcm9tIOaEvOO4seaEvOO4tXBhY2thZ2U6YmFzZeaEvOO4seaEvOO4tjpcblxuICAgIGRhdGVcbiJ9 -->
+<pre><code>
+Attaching package: &lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E35&gt;lubridate&lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E36&gt;
+
+The following object is masked from &lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E35&gt;package:base&lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E36&gt;:
+
+    date</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA8LSB5bWQoXCIyMDE3LTAxLTMxXCIpIFxuYiA8LSB5bWRfaG1zKFwiMjAxNy0wMS0zMSAyMDoxMTo1OVwiKVxuYGBgIn0= -->
+<pre class="r"><code>a &lt;- ymd(&quot;2017-01-31&quot;) 
+b &lt;- ymd_hms(&quot;2017-01-31 20:11:59&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGV2ZWxzKHN0dWRlbnQkPGU1Pu+KvjxlNz48OTQ+7riB7q+1KVxuYGBgIn0= -->
+<pre class="r"><code>levels(student$&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E34&gt;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGFibGUoc3R1ZGVudCTlh7rnlJ/lnLApXG5gYGAifQ== -->
+<pre class="r"><code>table(student$出生地)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgVmlldG5hbSAgICAgICAgICAgICAgICAgICAgICAgICAgICAg5LitJiMyMjI2OTsgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDkuK3lnIsgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg5Lit5ZyL6aaZ5rivIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDggICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAg5Lit5ZyL5buj5p2x55yBICAgICAgICAgICAgIOS4reiPr+S6uuawkeWFseWSjOWci+Wxseilv+ecgemBi+WfjuW4giBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOaXpeacrCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOWKoOaLv+WkpyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDlj7DkuK3luIIgICAgICAgICAgICAgICAgICAgICAgICAgICDlj7DkuK3luILosZDljp/ljYAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA4MSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg5Y+w5Lit57ijICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDlj7DljJcgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxNCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg5Y+w5YyX5biCICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg5Y+w5YyX57ijIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyOTUgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMjUgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOWPsOadsee4oyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg5Y+w5Y2XIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOWPsOWNl+W4giAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOWPsOWNl+e4oyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQ1ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA4IFxuICAgICAgICAgICAgICAgICAgICAgICAgICDlj7DngaPnnIHmlrDnq7nluIIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOWNsOWwvCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOWunOiYrSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOWunOiYreW4giBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDlrpzomK3nuKMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDoirHok67luIIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxNyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg6Iqx6JOu57ijICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg6Zi/5qC55bu3IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg5Y2X5oqVICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg5Y2X5oqV57ijIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMTAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg5bGP5p2xICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg5bGP5p2x5biCIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOWxj+adsee4oyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg576O5ZyLIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDYgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOiLl+agl+W4giAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOiLl+agl+e4oyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDExIFxuICAgICAgIOiLl+agl+e4o+mgreS7vemOruWwluS4i+mHjOWkp+WuieihlzXphLAzMeiZnyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg6Iux5ZyLIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg6aaZ5rivICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDmoYPlnJIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg5qGD5ZyS5biCICAgICAgICAgICAgICAgICAgICAgICAgICAg5qGD5ZyS5biC5bmz6Y6u5Y2AIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMzQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOahg+Wckue4oyDmoYPlnJLnuKPkuK3lo6LluILlhaflrprph4zlhavphLDlhaflrprkupTooZc1MOW3tzY36JmfIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNTggICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgICAgICAgICAg5qGD5ZyS57ij5Lit5aOi5biC6I+v5Yub6KGXMTXomZ8gICAgICAgICAgICAgICAgICAgICAgICAgICDmoYPlnJLnuKPmoYPlnJLluIIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDms7DlnIsgICAgICAgICAgICAgICAgICAgICAgICAgICDmtZnmsZ/nnIHmna3lt57luIIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOmmrOS+huilv+S6niAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOmrmOmbhOW4giBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEwICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDU1IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDpq5jpm4TnuKMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOWfuumahiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA3ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDln7rpmobluIIgICAgICAgICAgICAgICAgICAgICAgICAgICDmuZbljZfnnIHplbfmspnluIIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDotorljZcgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDpm7LmnpfnuKMgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxOSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg5paw5YyX5biCICAgICAgICAgICAgICAgICAgICAgICAgICAgICDmlrDljJfluILmlrDlupcgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEyNiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg5paw56u55biCICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg5paw56u557ijIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMjAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMTAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOWYiee+qeW4giAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOWYiee+qee4oyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA5ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOW9sOWMliAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOW9sOWMluW4giBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDlvbDljJbnuKMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDoh7rkuK3luIIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyNSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNSBcbiAgICAgICAgICAgICDoh7rkuK3luILopb/lsa/ljYDkuK3lt6Xkuozot68yMjTomZ8gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDoh7rkuK3nuKMgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDoh7rljJcgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDoh7rljJfluIIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA0NyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg6Ie65YyX57ijICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg6Ie65Y2X5biCIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDcgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDMgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg6Ie654GjICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDlu6PmnbEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg5r6O5rmW57ijICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDnt6znlLggXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDmvrPploAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOmfk+WciyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA2ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzIFxuIn0= -->
+<pre><code>
+                               Vietnam                             中&amp;#22269; 
+                                     1                                      1 
+                                  中國                               中國香港 
+                                     8                                      2 
+                            中國廣東省             中華人民共和國山西省運城市 
+                                     1                                      1 
+                                  日本                                 加拿大 
+                                     2                                      2 
+                                台中市                           台中市豐原區 
+                                    81                                      1 
+                                台中縣                                   台北 
+                                    14                                      3 
+                                台北市                                 台北縣 
+                                   295                                     25 
+                                台東縣                                   台南 
+                                     3                                      2 
+                                台南市                                 台南縣 
+                                    45                                      8 
+                          台灣省新竹市                                   印尼 
+                                     1                                      1 
+                                  宜蘭                                 宜蘭市 
+                                     1                                      3 
+                                宜蘭縣                                 花蓮市 
+                                    17                                      1 
+                                花蓮縣                                 阿根廷 
+                                     3                                      1 
+                                  南投                                 南投縣 
+                                     1                                     10 
+                                  屏東                                 屏東市 
+                                     1                                      1 
+                                屏東縣                                   美國 
+                                     1                                      6 
+                                苗栗市                                 苗栗縣 
+                                     3                                     11 
+       苗栗縣頭份鎮尖下里大安街5鄰31號                                   英國 
+                                     1                                      1 
+                                  香港                                   桃園 
+                                     5                                      3 
+                                桃園市                           桃園市平鎮區 
+                                    34                                      1 
+                                桃園縣 桃園縣中壢市內定里八鄰內定五街50巷67號 
+                                    58                                      1 
+                桃園縣中壢市華勛街15號                           桃園縣桃園市 
+                                     1                                      1 
+                                  泰國                           浙江省杭州市 
+                                     2                                      2 
+                              馬來西亞                                 高雄市 
+                                    10                                     55 
+                                高雄縣                                   基隆 
+                                     7                                      2 
+                                基隆市                           湖南省長沙市 
+                                    12                                      1 
+                                  越南                                 雲林縣 
+                                     2                                     19 
+                                新北市                             新北市新店 
+                                   126                                      1 
+                                新竹市                                 新竹縣 
+                                    20                                     10 
+                                嘉義市                                 嘉義縣 
+                                     9                                      3 
+                                  彰化                                 彰化市 
+                                     2                                      3 
+                                彰化縣                                 臺中市 
+                                    25                                      5 
+             臺中市西屯區中工二路224號                                 臺中縣 
+                                     1                                      1 
+                                  臺北                                 臺北市 
+                                     2                                     47 
+                                臺北縣                                 臺南市 
+                                     7                                      3 
+                                  臺灣                                   廣東 
+                                     1                                      1 
+                                澎湖縣                                   緬甸 
+                                     1                                      4 
+                                  澳門                                   韓國 
+                                     6                                      3 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBtZXNzYWdlOlxuSW4gc3Ryc3BsaXQoY29kZSwgXCJcXG5cIiwgZml4ZWQgPSBUUlVFKSA6XG4gIGlucHV0IHN0cmluZyAxIGlzIGludmFsaWQgaW4gdGhpcyBsb2NhbGVcbiJ9 -->
+<pre><code>Warning message:
+In strsplit(code, &quot;\n&quot;, fixed = TRUE) :
+  input string 1 is invalid in this locale</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIjIwMTgwOTI2Ig0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCg0KVGhpcyBpcyBhbiBbUiBNYXJrZG93bl0oaHR0cDovL3JtYXJrZG93bi5yc3R1ZGlvLmNvbSkgTm90ZWJvb2suIFdoZW4geW91IGV4ZWN1dGUgY29kZSB3aXRoaW4gdGhlIG5vdGVib29rLCB0aGUgcmVzdWx0cyBhcHBlYXIgYmVuZWF0aCB0aGUgY29kZS4gDQoNClRyeSBleGVjdXRpbmcgdGhpcyBjaHVuayBieSBjbGlja2luZyB0aGUgKlJ1biogYnV0dG9uIHdpdGhpbiB0aGUgY2h1bmsgb3IgYnkgcGxhY2luZyB5b3VyIGN1cnNvciBpbnNpZGUgaXQgYW5kIHByZXNzaW5nICpDdHJsK1NoaWZ0K0VudGVyKi4gDQoNCmBgYHtyfQ0KcGxvdChjYXJzKQ0KYGBgDQoNCkFkZCBhIG5ldyBjaHVuayBieSBjbGlja2luZyB0aGUgKkluc2VydCBDaHVuayogYnV0dG9uIG9uIHRoZSB0b29sYmFyIG9yIGJ5IHByZXNzaW5nICpDdHJsK0FsdCtJKi4NCg0KV2hlbiB5b3Ugc2F2ZSB0aGUgbm90ZWJvb2ssIGFuIEhUTUwgZmlsZSBjb250YWluaW5nIHRoZSBjb2RlIGFuZCBvdXRwdXQgd2lsbCBiZSBzYXZlZCBhbG9uZ3NpZGUgaXQgKGNsaWNrIHRoZSAqUHJldmlldyogYnV0dG9uIG9yIHByZXNzICpDdHJsK1NoaWZ0K0sqIHRvIHByZXZpZXcgdGhlIEhUTUwgZmlsZSkuDQoNClRoZSBwcmV2aWV3IHNob3dzIHlvdSBhIHJlbmRlcmVkIEhUTUwgY29weSBvZiB0aGUgY29udGVudHMgb2YgdGhlIGVkaXRvci4gQ29uc2VxdWVudGx5LCB1bmxpa2UgKktuaXQqLCAqUHJldmlldyogZG9lcyBub3QgcnVuIGFueSBSIGNvZGUgY2h1bmtzLiBJbnN0ZWFkLCB0aGUgb3V0cHV0IG9mIHRoZSBjaHVuayB3aGVuIGl0IHdhcyBsYXN0IHJ1biBpbiB0aGUgZWRpdG9yIGlzIGRpc3BsYXllZC4NCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIjIwMTgwOTI2Ig0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCg0KVGhpcyBpcyBhbiBbUiBNYXJrZG93bl0oaHR0cDovL3JtYXJrZG93bi5yc3R1ZGlvLmNvbSkgTm90ZWJvb2suIFdoZW4geW91IGV4ZWN1dGUgY29kZSB3aXRoaW4gdGhlIG5vdGVib29rLCB0aGUgcmVzdWx0cyBhcHBlYXIgYmVuZWF0aCB0aGUgY29kZS4gDQoNClRyeSBleGVjdXRpbmcgdGhpcyBjaHVuayBieSBjbGlja2luZyB0aGUgKlJ1biogYnV0dG9uIHdpdGhpbiB0aGUgY2h1bmsgb3IgYnkgcGxhY2luZyB5b3VyIGN1cnNvciBpbnNpZGUgaXQgYW5kIHByZXNzaW5nICpDdHJsK1NoaWZ0K0VudGVyKi4gDQpgYGB7cn0NCmxpYnJhcnkocmVhZHIpDQpzdHVkZW50IDwtIHJlYWRfY3N2KCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vdHBlbWFydGluL2NvdXJzZS0xMDctMS1wcm9ncmFtbWluZy1mb3ItZGF0YS1zY2llbmNlL21hc3Rlci9kYXRhL3N0dWRlbnQuY3N2IikNCmxpYnJhcnkoZHBseXIpDQpsaWJyYXJ5KG1hZ3JpdHRyKQ0Kc3R1ZGVudCAlPD4lIG11dGF0ZSgNCiAg6Lqr6auY57Sa6LedPWN1dCjouqvpq5gsYygwLDE1MCwxNTUsMTYwLDE2NSwxNzAsMTc1LDE4MCwxODUsMjAwKSkpDQpgYGANCg0KYGBge3J9DQphcy5mYWN0b3Ioc3R1ZGVudCTlh7rnlJ/lnLApIC0+IHN0dWRlbnQk5Ye655Sf5ZywDQpgYGANCg0KYGBge3J9DQpmYWN0b3Ioc3R1ZGVudCTouqvpq5jntJrot50sDQogICAgICAgbGV2ZWxzPWMoIigwLDE1MF0iLCIoMTUwLDE1NV0iLCAiKDE1NSwxNjBdIiwgIigxNjAsMTY1XSIgLCIoMTY1LDE3MF0iLCAiKDE3MCwxNzVdIiAsIigxNzUsMTgwXSIgLCIoMTgwLDE4NV0iLCAiKDE4NSwyMDBdIiksDQogICAgICAgb3JkZXJlZD1UUlVFKSAtPiBzdHVkZW50JOi6q+mrmOe0mui3nQ0KYGBgDQoNCmBgYHtyfQ0KbGlicmFyeShkcGx5cikNCmxpYnJhcnkobHVicmlkYXRlKQ0KYSA8LSB5bWQoIjIwMTctMDEtMzEiKSANCmIgPC0geW1kX2htcygiMjAxNy0wMS0zMSAyMDoxMTo1OSIpDQpgYGANCg0KYGBge3J9DQpsZXZlbHMoc3R1ZGVudCTlh7rnlJ/lnLApDQpgYGANCg0KYGBge3J9DQp0YWJsZShzdHVkZW50JOWHuueUn+WcsCkNCmBgYA0KDQoNCg0KDQo=</div>
 
 
 

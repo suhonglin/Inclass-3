@@ -12,17 +12,17 @@
     "path" : null,
     "project_path" : null,
     "properties" : {
-        "cacheKey" : "BCFA6DAA",
+        "cacheKey" : "2162599E",
         "caption" : "student",
-        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=student&cache_key=BCFA6DAA",
-        "displayedObservations" : 1057,
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=student&cache_key=2162599E",
+        "displayedObservations" : "1057",
         "environment" : "",
         "object" : "student",
-        "preview" : 0,
-        "totalObservations" : 1057,
-        "variables" : 5
+        "preview" : "0",
+        "totalObservations" : "1057",
+        "variables" : "4"
     },
-    "relative_order" : 2,
+    "relative_order" : 4,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_dataframe"

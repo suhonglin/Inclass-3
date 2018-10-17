@@ -1,11 +1,18 @@
 ---
-title: "2018-10-3"
+title: "google sheet"
 output: html_notebook
 ---
 ```{r}
-a <- seq(ymd("2001-01-01"),ymd("2018-09-01"),by="month")
-b <- seq(ymd("2001-01-01"),ymd("2018-09-01"),by="quarter")
-c <- seq(ymd("2001-01-01"),ymd("2018-09-01"),by="year")
+library(googlesheets)
+```
+
+```{r}
+gs_auth(new_user = TRUE)
+```
+
+```{r}
+gsSurvey<-gs_key("1mC9bnxj11NCNoOCw0Vmn4nxERbHtLjeGo9v9C9b2GDE")  #download sheet information as an object
+classSurvey<-gs_read(gsSurvey,ws=1) #access the 1st worksheet
 ```
 
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 

@@ -1,0 +1,50 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+## 1
+引入[五大銀行一個月定存固定利率歷史月資料](https://raw.githubusercontent.com/tpemartin/github-data/master/bankdata.csv)。
+
+```{r}
+library(readr)
+bankdata <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/bankdata.csv")
+```
+
+### 1.1
+將**銀行**變數改成factor
+```{r ans11}
+factor(bankdata$年月)->bankdata$年月
+```
+
+### 1.2
+將年月改成西元年月
+```{r ans12}
+library(lubridate)
+library(stringr)
+date <- bankdata$'年月'
+date <- str_c("1",date,"/01")
+date <- ymd(date)
+year(date) <- year(date)+911
+bankdata$'年月' <- date
+```
+
+## 2
+Google天災地圖會發佈天災時地資訊，如[潭美颱風(Typhoon Trami)](https://google.org/crisismap/google.com/2018-trami)，但它的時間是以UTC表示，如"2018/30/09 00:00 UTC",試透過`lubridate::with_tz()`將"2018/30/09 00:00 UTC"轉成台灣時間。(Hint: 台灣tzone可用`grep("Taipei",OlsonNames(),value=TRUE)`指令查得)
+
+```{r ans2}
+library(lubridate)
+with_tz(ymd_hm(2018/09/30 00:00))->googledatetime
+with_tz(googledatetimet,tzone = "AsiaTaipei")
+```
+
+
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.

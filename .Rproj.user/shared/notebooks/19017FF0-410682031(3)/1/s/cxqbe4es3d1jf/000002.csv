@@ -1,0 +1,3 @@
+"0","gsLMSHabit$hour <- hour(timestamp)"
+"2","Error in hour(timestamp) : could not find function ""hour""
+"

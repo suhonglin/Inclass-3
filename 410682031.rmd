@@ -1,0 +1,53 @@
+---
+title: "練習2"
+date: "2018-10-13"
+output: html_document
+params:
+  studentID: "410682031"
+  studentName: "蘇泓霖"
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+
+
+
+```{r}
+library(readr)
+library(stringr)
+
+filmVotingData <- read_csv("https://raw.githubusercontent.com/tpemartin/course-107-1-programming-for-data-science/master/data/%E7%AC%AC%E4%B8%89%E5%B1%86%E7%B6%93%E6%BF%9F%E6%92%AD%E5%AE%A2%E7%AB%B6%E8%B3%BD%E5%8F%83%E8%B3%BD%E4%BD%9C%E5%93%81%E6%8A%95%E7%A5%A8%E7%B5%90%E6%9E%9C%E6%A8%A3%E6%9C%AC%20-%20Sheet1.csv")
+head(filmVotingData$請選擇你最喜歡的影片二部)
+
+
+#2.1 將`filmVotingData$Timestamp`透過`lubridate::mdy_hms()`轉成POSIXct Date/Time class。
+
+library(lubridate)
+timestamp <- mdy_hms(filmVotingData$Timestamp)
+
+#2.2 由於原始資料的時區為UTC，請透過`lubridate::with_tz()`將時區設為"Asia/Taipei"。
+
+timestamp <- with_tz(timestamp,tzone="Asia/Taipei")
+
+#2.3 由Timestamp透過`lubridate::hour()`取出學生上網填表的小時值並存在新的變數`filmVotingData$hour`。  
+
+filmVotingData$hour <- hour(timestamp)
+
+#2.4 使用`table()`統計學生最活躍的填表時間。
+
+table(filmVotingData$hour)
+sort(table(filmVotingData$hour),decreasing = T)
+
+
+
+
+
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.

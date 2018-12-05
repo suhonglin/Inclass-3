@@ -1,0 +1,11 @@
+"0","library(readr)"
+"2","Warning message:
+"
+"2","In strsplit(code, ""\n"", fixed = TRUE) :"
+"2","
+ "
+"2"," input string 1 is invalid in this locale
+"
+"0","潭美颱風(Typhoon Trami) <- read_csv(""https://google.org/crisismap/google.com/2018-trami"")"
+"2","Error: unexpected symbol in ""潭美颱風(Typhoon Trami""
+"
